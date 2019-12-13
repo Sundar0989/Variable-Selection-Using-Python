@@ -109,6 +109,7 @@ print(clf.iv_df) #Information value dataset
 +----+---------------+------------------------+
 ```
 #### Apply this handly rule to select variables based on Information value
+```
 +-------------------+-----------------------------+
 | Information Value | Variable Predictiveness     |
 +-------------------+-----------------------------+
@@ -122,12 +123,11 @@ print(clf.iv_df) #Information value dataset
 +-------------------+-----------------------------+
 | >0.5              | Suspicious Predictive Power |
 +-------------------+-----------------------------+
+```
 
 ```python
 clf.transform(X) #apply WOE transformation on the dataset
 ```
-
-
 
 ### VotingSelector (Feature selection)
 
