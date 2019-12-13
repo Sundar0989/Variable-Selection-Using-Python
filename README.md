@@ -43,3 +43,24 @@ print(clf.bins)
  'pdays': array([-1.00e+00, -5.00e-01,  1.00e+00,  8.71e+02]),
  'previous': array([ 0.,  1., 25.])}
 ```
+
+### Weight of Evidence (WOE) and Information Value (IV)
+```python
+from xverse.transformer import WOE
+
+clf = WOE()
+clf.fit(X, y)
+
+print(clf.woe_df.head())
+```
+```
+	Variable_Name	Category	Count	Event	Non_Event	Event_Rate	Non_Event_Rate	Event_Distribution	Non_Event_Distribution	WOE	Information_Value
+0	age	(18.999, 35.0]	1652	197	1455	0.119249	0.880751	0.378119	0.36375	0.038742	0.024693
+1	age	(35.0, 45.0]	1388	129	1259	0.092939	0.907061	0.247601	0.31475	-0.239961	0.024693
+2	age	(45.0, 87.0]	1481	195	1286	0.131668	0.868332	0.374280	0.32150	0.152007	0.024693
+3	balance	(-3313.001, 174.0]	1512	133	1379	0.087963	0.912037	0.255278	0.34475	-0.300465	0.061574
+4	balance	(174.0, 979.333]	1502	163	1339	0.108522	0.891478	0.312860	0.33475	-0.067629	0.061574
+```
+
+
+
