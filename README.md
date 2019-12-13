@@ -1,3 +1,3 @@
 # xverse
 
-__xverse__ short for __x__ uni__verse__
+__xverse__ short for __x__ uni**verse** 
