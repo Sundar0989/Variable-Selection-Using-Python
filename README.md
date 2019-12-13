@@ -4,4 +4,4 @@
 
 ## Installation
 
-The package requires `numpy, pandas, scikit-learn, scipy, statsmodels`
+The package requires `numpy, pandas, scikit-learn, scipy` and `statsmodels`. 
