@@ -25,7 +25,7 @@ XVerse module are fully compatible with sklearn transformers, so they can be use
 
 ## Example
 
-### Monotonic Binning
+### Monotonic Binning (Feature transformation)
 ```python
 from xverse.transformer import MonotonicBinning
 
@@ -44,7 +44,7 @@ print(clf.bins)
  'previous': array([ 0.,  1., 25.])}
 ```
 
-### Weight of Evidence (WOE) and Information Value (IV)
+### Weight of Evidence (WOE) and Information Value (IV) (Feature transformation and Selection)
 ```python
 from xverse.transformer import WOE
 
@@ -108,7 +108,28 @@ print(clf.iv_df) #Information value dataset
 | 5  | default       | 1.6450124824351054e-05 |
 +----+---------------+------------------------+
 ```
+#### Apply this handly rule to select variables based on Information value
++-------------------+-----------------------------+
+| Information Value | Variable Predictiveness     |
++-------------------+-----------------------------+
+| Less than 0.02    | Not useful for prediction   |
++-------------------+-----------------------------+
+| 0.02 to 0.1       | Weak predictive Power       |
++-------------------+-----------------------------+
+| 0.1 to 0.3        | Medium predictive Power     |
++-------------------+-----------------------------+
+| 0.3 to 0.5        | Strong predictive Power     |
++-------------------+-----------------------------+
+| >0.5              | Suspicious Predictive Power |
++-------------------+-----------------------------+
 
+```python
+clf.transform(X) #apply WOE transformation on the dataset
+```
+
+
+
+### VotingSelector (Feature selection)
 
 
 
