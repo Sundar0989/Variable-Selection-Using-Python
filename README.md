@@ -1,3 +1,3 @@
 # xverse
 
-**xverse** short for **x** uni**verse** 
+**xverse** short for **x**-uni**verse** 
